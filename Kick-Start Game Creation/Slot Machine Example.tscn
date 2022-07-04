@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://2D/Slot Machine/Slot Machine Scene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://2D/Slot Machine/Scripts/MainSlotScript.gd" type="Script" id=2]
+[ext_resource path="res://.User Interface/Slot Machine/Slot Machine Scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://.User Interface/Slot Machine/Scripts/MainSlotScript.gd" type="Script" id=2]
 
 [node name="Slot Machine Example" type="Control"]
 anchor_right = 1.0
