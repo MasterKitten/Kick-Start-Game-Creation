@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LHS-BRD.ogg-b8a706d34ba5635c656a2778d7ecedd5.oggstr"
+
+[deps]
+
+source_file="res://2D Scene/Rhythm Game/LHS-BRD.ogg"
+dest_files=[ "res://.import/LHS-BRD.ogg-b8a706d34ba5635c656a2778d7ecedd5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
