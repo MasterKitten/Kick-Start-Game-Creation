@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://2D/Rhythm Game/Rhythm Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://2D/Rhythm Game/Spawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://2D/Rhythm Game/Scripts/Rhythm Manager.gd" type="Script" id=3]
+[ext_resource path="res://2D/Rhythm Game/Notes/Hold.tscn" type="PackedScene" id=4]
+[ext_resource path="res://2D/Rhythm Game/LHS-BRD.ogg" type="AudioStream" id=5]
+
+[node name="Rhythm Game Example" type="Node2D"]
+script = ExtResource( 3 )
+BPM = 152.0
+
+[node name="Rhythm Button" parent="." instance=ExtResource( 1 )]
+position = Vector2( 800, 50 )
+
+[node name="Spawner" parent="." instance=ExtResource( 2 )]
+position = Vector2( 800, 550 )
+Hold = ExtResource( 4 )
+NoteSection = PoolIntArray( 1, 2, 3, 4, 3, 4, 4 )
+NoteType = PoolIntArray( 0, 0, 0, 0, 0, 1, 1 )
+
+[node name="SpawnNotes" type="Button" parent="."]
+margin_left = 331.0
+margin_top = 267.0
+margin_right = 425.0
+margin_bottom = 287.0
+text = "Spawn Notes"
+
+[node name="Win" type="ColorRect" parent="."]
+visible = false
+margin_right = 1025.0
+margin_bottom = 600.0
+color = Color( 0.443137, 0.443137, 0.443137, 1 )
+
+[node name="Label" type="Label" parent="Win"]
+margin_right = 1023.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "You did the winning! Good Job!"
+align = 1
+autowrap = true
+uppercase = true
+
+[node name="Win" type="Button" parent="Win"]
+margin_left = 299.0
+margin_top = 271.0
+margin_right = 470.0
+margin_bottom = 291.0
+text = "Go back to the testing :D"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 502, 274 )
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="SpawnNotes" to="Spawner" method="_on_SpawnNotes_pressed"]
+[connection signal="pressed" from="Win/Win" to="." method="_on_Win_pressed"]
