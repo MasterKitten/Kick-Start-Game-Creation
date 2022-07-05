@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://.User Interface/Calculator/Calculator Basic.tscn" type="PackedScene" id=1]
+
+[node name="Calculator Example" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Calculator Basic" parent="." instance=ExtResource( 1 )]
+margin_left = 497.0
+margin_top = 202.0
+margin_right = -399.0
+margin_bottom = -248.0
+rect_scale = Vector2( 1.5, 1.5 )
