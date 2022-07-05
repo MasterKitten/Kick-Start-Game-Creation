@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2D Scene/Visual Novel/Scripts/TextBox.gd" type="Script" id=1]
+[ext_resource path="res://2D Scene/Visual Novel/Font/TextBox.tres" type="DynamicFont" id=2]
+
+[node name="TextBox" type="ColorRect"]
+margin_right = 750.0
+margin_bottom = 150.0
+color = Color( 0.388235, 0.388235, 0.388235, 0.545098 )
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 750.0
+margin_bottom = 120.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "Eggman: pingas"
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 750.0
+margin_bottom = 150.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_top = 120.0
+margin_right = 750.0
+margin_bottom = 150.0
+scroll_vertical_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+margin_right = 750.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Skip Button" type="Button" parent="ScrollContainer/HBoxContainer"]
+margin_right = 62.0
+margin_bottom = 30.0
+text = "Nothing"
+
+[connection signal="pressed" from="Button" to="." method="on_input"]

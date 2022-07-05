@@ -1,0 +1,7 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://2D Scene/Visual Novel/Font/CAMBRIAB.TTF" type="DynamicFontData" id=1]
+
+[resource]
+extra_spacing_space = -1
+font_data = ExtResource( 1 )
