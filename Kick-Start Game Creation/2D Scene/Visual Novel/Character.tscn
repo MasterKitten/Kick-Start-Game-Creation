@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://2D Scene/Visual Novel/Scripts/Character.gd" type="Script" id=1]
-[ext_resource path="res://2D Scene/Visual Novel/Sprites/Man.png" type="Texture" id=2]
-
-[node name="Character" type="Sprite"]
-texture = ExtResource( 2 )
-script = ExtResource( 1 )
