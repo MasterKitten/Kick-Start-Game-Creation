@@ -9,3 +9,5 @@ Currently Using: Godot_v3.5-rc4_win64
 Current Features [All of these have examples]: [1D] User Interface - Calculator, Idle Game, Slot Machine (with rigging mechanic), Computer
 | 2D Scene - Rhythm Game, Visual Novel
 | 3D Scene - {}
+
+Go to the Wiki on this GitHub to figure out how to use it! (it shouldn't be too hard!)
