@@ -85,6 +85,7 @@ func Dot_Button_Pressed():
 
 # Lastly, the Enter button to do all the lovely calculations.
 func Enter_Button_Pressed():
+	get_parent().get_node("PopupMenu").popup()
 	var FinalResult = 0
 	
 	match WhateverThingToDo:
@@ -112,3 +113,7 @@ func Enter_Button_Pressed():
 			FinalResult = stepify(FinalResult,0.00001)
 			TypeLine.text = str(FinalResult)
 			SavedFirstPart = 0
+
+# Now, change calculators!
+func Change_Calculators():
+	get_parent().get_node("Change Calculator").popup()
