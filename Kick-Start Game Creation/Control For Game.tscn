@@ -9,7 +9,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_right = 1025.0
+margin_right = 996.0
 margin_bottom = 601.0
 bbcode_enabled = true
 bbcode_text = "View the beutiful things that are created for your easy game deving with the 2D and 3D files. Don't worry about what is in Default. The examples are listed with this scene in the file share. Have Fun!"
