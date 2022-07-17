@@ -9,5 +9,3 @@ func _on_Bullet_body_entered(body):
 	if body.is_in_group(""): #put thing to kill here
 		body.queue_free()
 	queue_free()
-
-	print(self.transform)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://1D User Interface/Idle Game/Scripts/Main Game.gd" type="Script" id=1]
-[ext_resource path="res://1D User Interface/Idle Game/Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://.User Interface/Idle Game/Scripts/Main Game.gd" type="Script" id=1]
+[ext_resource path="res://.User Interface/Idle Game/Button.tscn" type="PackedScene" id=2]
 
 [node name="Idle Game Example" type="Control"]
 anchor_right = 1.0
@@ -28,23 +28,8 @@ margin_left = 825.0
 margin_top = 25.0
 margin_right = 975.0
 margin_bottom = 90.0
-
-[node name="ClickProgressBar" type="ProgressBar" parent="."]
-margin_left = 25.0
-margin_top = 360.0
-margin_right = 175.0
-margin_bottom = 375.0
-rounded = true
-percent_visible = false
-
-[node name="IdleProgressBar" type="ProgressBar" parent="."]
-margin_left = 25.0
-margin_top = 390.0
-margin_right = 175.0
-margin_bottom = 405.0
-rounded = true
-percent_visible = false
+rect_min_size = Vector2( 150, 50 )
+text = "Clicker"
+PriceOfItem = 10
 
 [connection signal="pressed" from="Clickable Thing" to="." method="ClickedItemButton"]
-[connection signal="value_changed" from="ClickProgressBar" to="." method="ClickProgress"]
-[connection signal="value_changed" from="IdleProgressBar" to="." method="IdleProgress"]
