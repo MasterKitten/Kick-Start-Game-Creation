@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://2D Scene/Pet Simulator (Unfinished)/WindowDialog.tscn" type="PackedScene" id=1]
+
+[node name="Pet Simulator Example" type="Node2D"]
+
+[node name="Stats" parent="." instance=ExtResource( 1 )]
+margin_left = 42.0
+margin_top = 489.0
+margin_right = 242.0
+margin_bottom = 579.0

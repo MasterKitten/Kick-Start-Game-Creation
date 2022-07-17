@@ -1,9 +1,9 @@
 extends Button
 
-export var PriceOfItem = 1
+export var PriceOfItem = 1.0
 export var PriceMultiplier = 1.1
 # Amount of IPS that the TotalIPS variable gets.
-export var AddedIPS = 1
+export var AddedIPS = 1.0
 onready var Game = get_node("/root/Idle Game Example")
 
 func _ready():
