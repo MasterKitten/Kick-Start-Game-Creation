@@ -1,0 +1,215 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://1D User Interface/Calculator/Fonts/Calculator Basic.tres" type="DynamicFont" id=1]
+[ext_resource path="res://1D User Interface/Calculator/Scripts/Calculator Basic.gd" type="Script" id=2]
+
+[node name="Calculator Basic" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -896.0
+margin_bottom = -476.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 104.0
+margin_bottom = 124.0
+color = Color( 0.635294, 0.635294, 0.635294, 1 )
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_right = 260.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_fonts/font = ExtResource( 1 )
+max_length = 25
+placeholder_text = "Type here | Press buttons"
+
+[node name="One" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 24.0
+margin_right = 28.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+
+[node name="Two" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 48.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+
+[node name="Three" type="Button" parent="."]
+margin_left = 44.0
+margin_top = 24.0
+margin_right = 68.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "3"
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 24.0
+margin_right = 88.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "<"
+
+[node name="Pi Symbol" type="Button" parent="."]
+margin_left = 84.0
+margin_top = 24.0
+margin_right = 108.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "π"
+
+[node name="Four" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 44.0
+margin_right = 28.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "4"
+
+[node name="Five" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 44.0
+margin_right = 48.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "5"
+
+[node name="Six" type="Button" parent="."]
+margin_left = 44.0
+margin_top = 44.0
+margin_right = 68.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "6"
+
+[node name="Add" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 44.0
+margin_right = 88.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "+"
+
+[node name="Seven" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 64.0
+margin_right = 28.0
+margin_bottom = 94.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "7"
+
+[node name="Eight" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 64.0
+margin_right = 48.0
+margin_bottom = 94.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "8"
+
+[node name="Nine" type="Button" parent="."]
+margin_left = 44.0
+margin_top = 64.0
+margin_right = 68.0
+margin_bottom = 94.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "9"
+
+[node name="Subtract" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 88.0
+margin_bottom = 94.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "-"
+
+[node name="Dot" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 84.0
+margin_right = 28.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "."
+
+[node name="Zero" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 84.0
+margin_right = 48.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+
+[node name="Divide" type="Button" parent="."]
+margin_left = 44.0
+margin_top = 84.0
+margin_right = 68.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "/"
+
+[node name="Multiply" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 84.0
+margin_right = 88.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "*"
+
+[node name="Enter" type="Button" parent="."]
+margin_left = 84.0
+margin_top = 84.0
+margin_right = 108.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "="
+
+[node name="Calculators" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 104.0
+margin_right = 152.0
+margin_bottom = 134.0
+rect_scale = Vector2( 0.65, 0.55 )
+custom_fonts/font = ExtResource( 1 )
+text = "Calculators"
+
+[connection signal="pressed" from="One" to="." method="One_Button_Pressed"]
+[connection signal="pressed" from="Two" to="." method="Two_Button_Pressed"]
+[connection signal="pressed" from="Three" to="." method="Three_Button_Pressed"]
+[connection signal="pressed" from="Delete" to="." method="Delete_Button_Pressed"]
+[connection signal="pressed" from="Pi Symbol" to="." method="PI_Button_Pressed"]
+[connection signal="pressed" from="Four" to="." method="Four_Button_Pressed"]
+[connection signal="pressed" from="Five" to="." method="Five_Button_Pressed"]
+[connection signal="pressed" from="Six" to="." method="Six_Button_Pressed"]
+[connection signal="pressed" from="Add" to="." method="Add_Button_Pressed"]
+[connection signal="pressed" from="Seven" to="." method="Seven_Button_Pressed"]
+[connection signal="pressed" from="Eight" to="." method="Eight_Button_Pressed"]
+[connection signal="pressed" from="Nine" to="." method="Nine_Button_Pressed"]
+[connection signal="pressed" from="Subtract" to="." method="Subtract_Button_Pressed"]
+[connection signal="pressed" from="Dot" to="." method="Dot_Button_Pressed"]
+[connection signal="pressed" from="Zero" to="." method="Zero_Button_Pressed"]
+[connection signal="pressed" from="Divide" to="." method="Divide_Button_Pressed"]
+[connection signal="pressed" from="Multiply" to="." method="Multiply"]
+[connection signal="pressed" from="Enter" to="." method="Enter_Button_Pressed"]
+[connection signal="pressed" from="Calculators" to="." method="Change_Calculators"]

@@ -1,0 +1,164 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://1D User Interface/Computer/Script/Desktop.gd" type="Script" id=1]
+[ext_resource path="res://1D User Interface/Computer/Script/Setting Menu.gd" type="Script" id=2]
+[ext_resource path="res://1D User Interface/Computer/Images/Internet Explorer.png" type="Texture" id=3]
+[ext_resource path="res://1D User Interface/Computer/Images/Trash.png" type="Texture" id=4]
+
+[node name="Desktop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -666, -190 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1000.0
+margin_bottom = 600.0
+color = Color( 0.670588, 0.670588, 0.670588, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 560.0
+margin_right = 1000.0
+margin_bottom = 600.0
+color = Color( 0.545098, 0.733333, 1, 0.498039 )
+
+[node name="Setting Menu" type="Button" parent="ColorRect"]
+modulate = Color( 1, 1, 1, 0.8 )
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 39.0
+margin_bottom = 39.0
+toggle_mode = true
+text = "Esc"
+script = ExtResource( 2 )
+
+[node name="Menu" type="ColorRect" parent="ColorRect/Setting Menu"]
+visible = false
+margin_left = -1.0
+margin_top = -301.0
+margin_right = 199.0
+margin_bottom = -1.0
+
+[node name="Off" type="Button" parent="ColorRect/Setting Menu/Menu"]
+margin_left = 2.0
+margin_top = 278.0
+margin_right = 38.0
+margin_bottom = 298.0
+text = "Off"
+
+[node name="Log Off" type="Button" parent="ColorRect/Setting Menu/Menu"]
+margin_left = 41.0
+margin_top = 278.0
+margin_right = 88.0
+margin_bottom = 298.0
+text = "Sloop"
+
+[node name="Internet Button" type="Button" parent="."]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 115.0
+margin_bottom = 115.0
+focus_mode = 0
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Internet Button"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 86.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Explore Net"
+align = 1
+
+[node name="Trash Can" type="Button" parent="."]
+margin_left = 115.0
+margin_top = 15.0
+margin_right = 215.0
+margin_bottom = 115.0
+focus_mode = 0
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Trash Can"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_top = 86.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Trash Can"
+align = 1
+
+[node name="Internet" type="ColorRect" parent="."]
+visible = false
+margin_right = 1000.0
+margin_bottom = 600.0
+color = Color( 0.443137, 1, 0.737255, 1 )
+
+[node name="Back" type="Button" parent="Internet"]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 32.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( -83, -12 )
+text = "<--"
+
+[node name="Forward" type="Button" parent="Internet"]
+margin_left = 35.0
+margin_top = 1.0
+margin_right = 65.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( -83, -12 )
+text = "-->"
+
+[node name="Refresh" type="Button" parent="Internet"]
+margin_left = 69.0
+margin_top = 1.0
+margin_right = 99.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( -83, -12 )
+text = "ref"
+
+[node name="LineEdit" type="LineEdit" parent="Internet"]
+margin_left = 101.0
+margin_right = 933.0
+margin_bottom = 32.0
+placeholder_text = "Search for something like \"how to become a furry\""
+
+[node name="Extension" type="Button" parent="Internet"]
+margin_left = 935.0
+margin_top = 1.0
+margin_right = 965.0
+margin_bottom = 31.0
+text = "Ext"
+
+[node name="Exit" type="Button" parent="Internet"]
+margin_left = 969.0
+margin_top = 1.0
+margin_right = 999.0
+margin_bottom = 31.0
+text = "X"
+
+[node name="Trash" type="WindowDialog" parent="."]
+margin_left = 710.0
+margin_top = 47.0
+margin_right = 910.0
+margin_bottom = 247.0
+
+[connection signal="toggled" from="ColorRect/Setting Menu" to="ColorRect/Setting Menu" method="_on_Setting_Menu_toggled"]
+[connection signal="pressed" from="ColorRect/Setting Menu/Menu/Off" to="ColorRect/Setting Menu" method="_on_Off_pressed"]
+[connection signal="pressed" from="ColorRect/Setting Menu/Menu/Log Off" to="." method="_on_Log_Off_pressed"]
+[connection signal="pressed" from="Internet Button" to="." method="_on_Internet_Button_pressed" binds= [ false ]]
+[connection signal="pressed" from="Trash Can" to="." method="_on_Trash_Can_pressed"]
+[connection signal="pressed" from="Internet/Exit" to="." method="_on_Internet_Button_pressed" binds= [ true ]]

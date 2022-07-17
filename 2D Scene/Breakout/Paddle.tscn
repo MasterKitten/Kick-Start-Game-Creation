@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2D Scene/Breakout/script/Paddle.gd" type="Script" id=1]
+[ext_resource path="res://2D Scene/Breakout/Textures/Block.png" type="Texture" id=2]
+
+[node name="Paddle" type="KinematicBody2D"]
+script = ExtResource( 1 )
+Speed = 50000.0
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -64, -19, 0, -24, 64, -19, 64, 7, -64, 7 )
