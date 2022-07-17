@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://2D Scene/Visual Novel/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://2D Scene/Visual Novel/Sprites/Meme6.png" type="Texture" id=2]
+[ext_resource path="res://2D Scene/Visual Novel/TextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://2D Scene/Visual Novel/Sprites/Man.png" type="Texture" id=4]
+
+[node name="Visual Novel Example" type="Node2D"]
+
+[node name="Character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 247, 327 )
+scale = Vector2( 0.355735, 0.344735 )
+Admiration = ExtResource( 2 )
+Adoration = ExtResource( 4 )
+
+[node name="Character2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 696, 274 )
+scale = Vector2( -0.357873, 0.345 )
+Name = "Man2"
+Admiration = ExtResource( 2 )
+Adoration = ExtResource( 4 )
+
+[node name="TextBox" parent="." instance=ExtResource( 3 )]
+margin_left = 125.0
+margin_top = 450.0
+margin_right = 875.0
+margin_bottom = 600.0
+TextPieces = [ "Nice weather we are having today", "Yes, indeed", "Boom", "Boom", "Sorry bout that", "No problem" ]
+PersonSpeaking = [ 1, 2, 1, 2, 1, 2 ]
+PersonEmotion = [ "Adoration", "Adoration", "Admiration", "Admiration", "Adoration", "Adoration" ]
