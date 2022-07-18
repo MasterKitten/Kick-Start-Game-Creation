@@ -15,5 +15,5 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("Click"):
 		var b = Bullet.instance()
-		add_child(b)
-		b.position = $"Shooting Area".position
+		owner.add_child(b)
+		b.transform = $"Shooting Area".global_transform

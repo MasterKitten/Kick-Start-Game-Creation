@@ -7,8 +7,9 @@
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 1 )
-RunSpeed = 10.0
-JumpSpeed = 1.0
+RunSpeed = 900.0
+JumpSpeed = 600.0
+Gravity = 40.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1.66893e-06, 9.53674e-07 )
