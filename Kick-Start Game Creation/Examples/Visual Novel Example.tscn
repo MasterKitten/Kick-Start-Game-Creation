@@ -25,6 +25,25 @@ margin_left = 125.0
 margin_top = 450.0
 margin_right = 875.0
 margin_bottom = 600.0
-TextPieces = [ "Nice weather we are having today", "Yes, indeed", "Boom", "Boom", "Sorry bout that", "No problem" ]
-PersonSpeaking = [ 1, 2, 1, 2, 1, 2 ]
-PersonEmotion = [ "Adoration", "Adoration", "Admiration", "Admiration", "Adoration", "Adoration" ]
+TextPieces = [ "Nice weather we are having today", "Yes, indeed", "Boom", "Boom", "Sorry bout that", "No problem", "What are you doing?", "Interesting" ]
+PersonSpeaking = [ 1, 2, 1, 2, 1, 2, 3, 1 ]
+PersonEmotion = [ "Adoration", "Adoration", "Admiration", "Admiration", "Adoration", "Adoration", "0", "0" ]
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Answer1" type="Button" parent="Buttons"]
+visible = false
+margin_left = 200.0
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 170.0
+
+[node name="Answer2" type="Button" parent="Buttons"]
+visible = false
+margin_left = 200.0
+margin_top = 250.0
+margin_right = 800.0
+margin_bottom = 270.0
+
+[connection signal="pressed" from="Buttons/Answer1" to="TextBox" method="_on_Answer1_pressed"]
+[connection signal="pressed" from="Buttons/Answer2" to="TextBox" method="_on_Answer2_pressed"]

@@ -2,7 +2,14 @@ extends ColorRect
 
 export var TextPieces = ["test"]
 var TextChainNumber = 0
-# This is whomever is speaking, 1 is left, 2 is right
+
+export var TextChoices = ["Test 1", "Test 2"]
+var AnswerChainNumber = 0
+var Answering = false
+
+export onready var Answer1 = get_parent().get_node("Buttons/Answer1")
+export onready var Answer2 = get_parent().get_node("Buttons/Answer2")
+# This is whomever is speaking, 1 is left, 2 is right, 3 is player
 export var PersonSpeaking = [1]
 export var PersonEmotion = ["Adoration"]
 
@@ -11,21 +18,39 @@ export onready var Person2 = get_parent().get_node("Character2")
 onready var Text = get_node("RichTextLabel")
 
 func _ready():
-	if PersonSpeaking[TextChainNumber] == 1:
-		Text.text = Person1.Name + ": " + TextPieces[TextChainNumber]
-		Change_Emotion(PersonEmotion[TextChainNumber])
-	else:
-		Text.text = Person2.Name + ": " + TextPieces[TextChainNumber]
-		Change_Emotion(PersonEmotion[TextChainNumber])
+	if Answering == false:
+		if PersonSpeaking[TextChainNumber] == 1:
+			Text.text = Person1.Name + ": " + TextPieces[TextChainNumber]
+			Change_Emotion(PersonEmotion[TextChainNumber])
+		elif PersonSpeaking[TextChainNumber] == 2:
+			Text.text = Person2.Name + ": " + TextPieces[TextChainNumber]
+			Change_Emotion(PersonEmotion[TextChainNumber])
+		else:
+			Text.text = TextPieces[TextChainNumber]
+			Answering = true
+			GetAnswers()
+
+func GetAnswers():
+	Answer1.visible = true
+	Answer1.text = TextChoices[AnswerChainNumber]
+	AnswerChainNumber += 1
+	Answer2.visible = true
+	Answer2.text = TextChoices[AnswerChainNumber]
+	AnswerChainNumber += 1
 
 func on_input():
-	TextChainNumber += 1
-	if PersonSpeaking[TextChainNumber] == 1:
-		Text.text = Person1.Name + ": " + TextPieces[TextChainNumber]
-		Change_Emotion(PersonEmotion[TextChainNumber])
-	else:
-		Text.text = Person2.Name + ": " + TextPieces[TextChainNumber]
-		Change_Emotion(PersonEmotion[TextChainNumber])
+	if Answering == false:
+		TextChainNumber += 1
+		if PersonSpeaking[TextChainNumber] == 1:
+			Text.text = Person1.Name + ": " + TextPieces[TextChainNumber]
+			Change_Emotion(PersonEmotion[TextChainNumber])
+		elif PersonSpeaking[TextChainNumber] == 2:
+			Text.text = Person2.Name + ": " + TextPieces[TextChainNumber]
+			Change_Emotion(PersonEmotion[TextChainNumber])
+		else:
+			Text.text = TextPieces[TextChainNumber]
+			Answering = true
+			GetAnswers()
 	
 func Change_Emotion(var EmotionString):
 	match EmotionString:
@@ -164,3 +189,15 @@ func Change_Emotion(var EmotionString):
 				Person1.texture = Person1.Surprise
 			else:
 				Person2.texture = Person1.Surprise
+
+func _on_Answer1_pressed():
+	Answer1.visible = false
+	Answer2.visible = false
+	Answering = false
+	on_input()
+
+func _on_Answer2_pressed():
+	Answer1.visible = false
+	Answer2.visible = false
+	Answering = false
+	on_input()
