@@ -14,4 +14,4 @@ Current Features [All of these have examples]: [1D] User Interface - Calculator,
 
 Go to the Wiki on this GitHub to figure out how to use it! (it shouldn't be too hard!)
 
-Wierd projects that I have made: 20en español: veinte)
+Wierd projects that I have made: 20 (en español: veinte)
