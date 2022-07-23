@@ -2,8 +2,11 @@ extends KinematicBody
 
 export(float) var Speed = 8.0
 export(float) var RunMultiplier = 1.5
-export(float) var Gravity = 4
-export(float) var JumpStrength = 50
+export(float) var Gravity = 4.0
+export(float) var JumpStrength = 50.0
+
+export(float) var MaxZoomIn = 0.0
+export(float) var MaxZoomOut = 20.0
 
 var Velocity = Vector3(0, 0, 0)
 var CameraMovement = Vector3(0, 0, 0)
@@ -21,8 +24,14 @@ func _input(event):
 			Axis.rotation_degrees.x = 80
 		if Axis.rotation_degrees.x <= -80:
 			Axis.rotation_degrees.x = -80
+	if Input.get_action_strength("Zoom_In"):
+		if Axis.get_node("Camera").translation.z > MaxZoomIn:
+			Axis.get_node("Camera").translation.z -= 1
+	if Input.get_action_strength("Zoom_Out"):
+		if Axis.get_node("Camera").translation.z < MaxZoomOut:
+			Axis.get_node("Camera").translation.z += 1
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# WHY DOES THIS WORK BUT THE OTHER SH*T DESIDES TO GO _spin_ LIKE WHAT!? sorry for stealing code, I really tried.
 	Velocity = Vector3((Input.get_action_strength("Right") - Input.get_action_strength("Left")), Velocity.y, (Input.get_action_strength("Down") - Input.get_action_strength("Up")))
 	Velocity = Velocity.rotated(Vector3.UP, self.global_transform.basis.get_euler().y)

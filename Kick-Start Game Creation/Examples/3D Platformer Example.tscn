@@ -12,6 +12,7 @@
 transform = Transform( 0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 1.19209e-07, 1.14456, 2.11087 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 1 )
@@ -20,4 +21,4 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179852, 2.24972, -0.0839943 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179852, 2.84457, -0.0839943 )
