@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://3D Scene/3D & 2D Platformer/PlatformerPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://3D Scene/3D & 2D Platformer/Platform.tscn" type="PackedScene" id=2]
+
+[node name="3D & 2D Platform Example" type="Spatial"]
+
+[node name="KinematicBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89089, 4.10641, 0.0813682 )
+RunSpeed = 50.0
+JumpSpeed = 25.0
+
+[node name="StaticBody" parent="." instance=ExtResource( 2 )]
+transform = Transform( 83.0893, 0, 0, 0, 1, 0, 0, 0, 1, -0.0178556, 9.53674e-07, 0.0150619 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]

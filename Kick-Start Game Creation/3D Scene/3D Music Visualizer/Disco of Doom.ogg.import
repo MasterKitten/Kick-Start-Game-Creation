@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Disco of Doom.ogg-32d22ddb1118360877cde58bc72cffe1.oggstr"
+
+[deps]
+
+source_file="res://3D Scene/3D Music Visualizer/Disco of Doom.ogg"
+dest_files=[ "res://.import/Disco of Doom.ogg-32d22ddb1118360877cde58bc72cffe1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

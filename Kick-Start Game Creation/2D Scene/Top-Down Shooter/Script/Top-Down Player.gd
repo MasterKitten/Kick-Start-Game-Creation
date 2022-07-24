@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var Speed = 5000
 export(PackedScene) var Bullet
+onready var Scene = get_parent()
 
 # Walk, damn it!
 func _physics_process(delta):
@@ -18,5 +19,5 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Click"):
 		var b = Bullet.instance()
-		add_child(b)
-		b.position = $Muzzle.position
+		owner.add_child(b)
+		b.transform = $Muzzle.global_transform

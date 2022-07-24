@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://3D Scene/Punch-Out/Textures/Scout.png" type="Texture" id=1]
+[ext_resource path="res://3D Scene/Punch-Out/Script/Punch Player.gd" type="Script" id=2]
+
+[node name="Punch Player" type="Sprite3D"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 10, 15 )
+current = true
+fov = 60.0
