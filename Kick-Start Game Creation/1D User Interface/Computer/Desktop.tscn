@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://1D User Interface/Computer/Script/Desktop.gd" type="Script" id=1]
 [ext_resource path="res://1D User Interface/Computer/Script/Setting Menu.gd" type="Script" id=2]
 [ext_resource path="res://1D User Interface/Computer/Images/Internet Explorer.png" type="Texture" id=3]
 [ext_resource path="res://1D User Interface/Computer/Images/Trash.png" type="Texture" id=4]
+[ext_resource path="res://1D User Interface/Computer/Script/Internet.gd" type="Script" id=5]
 
 [node name="Desktop" type="Control"]
 anchor_right = 1.0
@@ -101,10 +102,22 @@ text = "Trash Can"
 align = 1
 
 [node name="Internet" type="ColorRect" parent="."]
-visible = false
 margin_right = 1000.0
 margin_bottom = 600.0
 color = Color( 0.443137, 1, 0.737255, 1 )
+script = ExtResource( 5 )
+SearchTerms = PoolStringArray( "ppbison", "pornhub.com" )
+
+[node name="Site1" type="ColorRect" parent="Internet"]
+visible = false
+margin_right = 1000.0
+margin_bottom = 600.0
+
+[node name="Site2" type="ColorRect" parent="Internet"]
+visible = false
+margin_right = 1000.0
+margin_bottom = 600.0
+color = Color( 1, 0, 0, 1 )
 
 [node name="Back" type="Button" parent="Internet"]
 margin_left = 2.0
@@ -161,4 +174,5 @@ margin_bottom = 247.0
 [connection signal="pressed" from="ColorRect/Setting Menu/Menu/Log Off" to="." method="_on_Log_Off_pressed"]
 [connection signal="pressed" from="Internet Button" to="." method="_on_Internet_Button_pressed" binds= [ false ]]
 [connection signal="pressed" from="Trash Can" to="." method="_on_Trash_Can_pressed"]
+[connection signal="text_entered" from="Internet/LineEdit" to="Internet" method="On_Searched"]
 [connection signal="pressed" from="Internet/Exit" to="." method="_on_Internet_Button_pressed" binds= [ true ]]

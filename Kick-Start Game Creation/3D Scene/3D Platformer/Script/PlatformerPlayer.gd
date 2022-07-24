@@ -5,6 +5,10 @@ export(float) var RunMultiplier = 1.5
 export(float) var Gravity = 4.0
 export(float) var JumpStrength = 50.0
 
+export(bool) var CanAirJump
+export(int) var MaxAirJumps
+var CurrentAirJumps = 0
+
 export(float) var MaxZoomIn = 0.0
 export(float) var MaxZoomOut = 20.0
 
@@ -41,9 +45,14 @@ func _physics_process(_delta):
 		Velocity = Vector3(Velocity.x * RunMultiplier, Velocity.y, Velocity.z * RunMultiplier)
 	
 	if Input.is_action_just_pressed("Jump3D") and is_on_floor():
-		# Not Working At The Moment, trying to find a fix.
 		Velocity.y = JumpStrength
-
+	# Air Jumps
+	if Input.is_action_just_pressed("Jump3D") and CanAirJump == true and CurrentAirJumps != MaxAirJumps:
+		CurrentAirJumps += 1
+		Velocity.y = JumpStrength
+	if is_on_floor():
+		CurrentAirJumps = 0
+	
 	Velocity.y -= Gravity
 	
 	Velocity = move_and_slide(Velocity, Vector3.UP)

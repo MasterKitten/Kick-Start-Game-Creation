@@ -4,7 +4,6 @@ var MoneySpent = 0.0
 var MoneyGave = 0.0
 
 export var MoneyRequired = 25.0
-
 var MoneyHave = 1000000
 # As the game progresses, the person should get only this PERCENTAGE back fron the machine
 export var PercentWin = 10.0

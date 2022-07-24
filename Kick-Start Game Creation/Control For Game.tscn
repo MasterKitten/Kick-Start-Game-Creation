@@ -1,8 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Control For Game.gd" type="Script" id=1]
 
 [node name="Control For Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="This is the default" type="Control" parent="."]
 margin_right = 40.0
@@ -10,7 +13,201 @@ margin_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_right = 996.0
-margin_bottom = 601.0
+margin_bottom = 46.0
 bbcode_enabled = true
 bbcode_text = "View the beutiful things that are created for your easy game deving with the 2D and 3D files. Don't worry about what is in Default. The examples are listed with this scene in the file share. Have Fun!"
 text = "View the beutiful things that are created for your easy game deving with the 2D and 3D files. Don't worry about what is in Default. The examples are listed with this scene in the file share. Have Fun!"
+
+[node name="User Interface Games" type="VBoxContainer" parent="."]
+margin_top = 100.0
+margin_right = 200.0
+margin_bottom = 500.0
+
+[node name="UI Button" type="Button" parent="User Interface Games"]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "Calculator"
+
+[node name="UI Button2" type="Button" parent="User Interface Games"]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 44.0
+text = "Computer"
+
+[node name="UI Button3" type="Button" parent="User Interface Games"]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 68.0
+text = "Computer RPG"
+
+[node name="UI Button4" type="Button" parent="User Interface Games"]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 92.0
+text = "Godot Splash Screen"
+
+[node name="UI Button5" type="Button" parent="User Interface Games"]
+margin_top = 96.0
+margin_right = 200.0
+margin_bottom = 116.0
+text = "Idle"
+
+[node name="UI Button6" type="Button" parent="User Interface Games"]
+margin_top = 120.0
+margin_right = 200.0
+margin_bottom = 140.0
+text = "Slot Machine"
+
+[node name="UI Button7" type="Button" parent="User Interface Games"]
+margin_top = 144.0
+margin_right = 200.0
+margin_bottom = 164.0
+text = "Typing Adventure"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_top = 80.0
+margin_right = 200.0
+margin_bottom = 100.0
+text = "User Interface Games"
+
+[node name="2D Games" type="VBoxContainer" parent="."]
+margin_left = 200.0
+margin_top = 100.0
+margin_right = 400.0
+margin_bottom = 500.0
+
+[node name="2D Button" type="Button" parent="2D Games"]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "2D Platformer"
+
+[node name="2D Button2" type="Button" parent="2D Games"]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 44.0
+text = "Breakout"
+
+[node name="2D Button3" type="Button" parent="2D Games"]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 68.0
+text = "Endless Runner"
+
+[node name="2D Button4" type="Button" parent="2D Games"]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 92.0
+text = "Endless Shoot-em-up"
+
+[node name="2D Button5" type="Button" parent="2D Games"]
+margin_top = 96.0
+margin_right = 200.0
+margin_bottom = 116.0
+text = "Pet Simulator"
+
+[node name="2D Button6" type="Button" parent="2D Games"]
+margin_top = 120.0
+margin_right = 200.0
+margin_bottom = 140.0
+text = "Rhythm"
+
+[node name="2D Button7" type="Button" parent="2D Games"]
+margin_top = 144.0
+margin_right = 200.0
+margin_bottom = 164.0
+text = "Top-Down Shooter"
+
+[node name="2D Button8" type="Button" parent="2D Games"]
+margin_top = 168.0
+margin_right = 200.0
+margin_bottom = 188.0
+text = "Visual Novel"
+
+[node name="2D Button9" type="Button" parent="2D Games"]
+margin_top = 192.0
+margin_right = 200.0
+margin_bottom = 212.0
+text = "Volume Visualizer"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 200.0
+margin_top = 80.0
+margin_right = 400.0
+margin_bottom = 100.0
+text = "2D Ganes"
+
+[node name="3D Games" type="VBoxContainer" parent="."]
+margin_left = 400.0
+margin_top = 100.0
+margin_right = 600.0
+margin_bottom = 500.0
+
+[node name="3D Button" type="Button" parent="3D Games"]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "2.5D Platformer"
+
+[node name="3D Button2" type="Button" parent="3D Games"]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 44.0
+text = "3D Music Visualizer"
+
+[node name="3D Button3" type="Button" parent="3D Games"]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 68.0
+text = "3D Platformer"
+
+[node name="3D Button4" type="Button" parent="3D Games"]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 92.0
+text = "Punch-Out!!!"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+margin_left = 400.0
+margin_top = 80.0
+margin_right = 600.0
+margin_bottom = 100.0
+text = "3D Ganes"
+
+[node name="Roblox Clones" type="VBoxContainer" parent="."]
+margin_left = 600.0
+margin_top = 100.0
+margin_right = 800.0
+margin_bottom = 500.0
+
+[node name="Clone Button" type="Button" parent="Roblox Clones"]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "Tycoon"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+margin_left = 600.0
+margin_top = 80.0
+margin_right = 800.0
+margin_bottom = 100.0
+text = "Roblox Clones"
+
+[connection signal="pressed" from="User Interface Games/UI Button" to="." method="_on_UI_Button_pressed"]
+[connection signal="pressed" from="User Interface Games/UI Button2" to="." method="_on_UI_Button2_pressed"]
+[connection signal="pressed" from="User Interface Games/UI Button3" to="." method="_on_UI_Button3_pressed"]
+[connection signal="pressed" from="User Interface Games/UI Button4" to="." method="_on_UI_Button4_pressed"]
+[connection signal="pressed" from="User Interface Games/UI Button5" to="." method="_on_UI_Button5_pressed"]
+[connection signal="pressed" from="User Interface Games/UI Button6" to="." method="_on_UI_Button6_pressed"]
+[connection signal="pressed" from="User Interface Games/UI Button7" to="." method="_on_UI_Button7_pressed"]
+[connection signal="pressed" from="2D Games/2D Button" to="." method="_on_2D_Button_pressed"]
+[connection signal="pressed" from="2D Games/2D Button2" to="." method="_on_2D_Button2_pressed"]
+[connection signal="pressed" from="2D Games/2D Button3" to="." method="_on_2D_Button3_pressed"]
+[connection signal="pressed" from="2D Games/2D Button4" to="." method="_on_2D_Button4_pressed"]
+[connection signal="pressed" from="2D Games/2D Button5" to="." method="_on_2D_Button5_pressed"]
+[connection signal="pressed" from="2D Games/2D Button6" to="." method="_on_2D_Button6_pressed"]
+[connection signal="pressed" from="2D Games/2D Button7" to="." method="_on_2D_Button7_pressed"]
+[connection signal="pressed" from="2D Games/2D Button8" to="." method="_on_2D_Button8_pressed"]
+[connection signal="pressed" from="2D Games/2D Button9" to="." method="_on_2D_Button9_pressed"]
+[connection signal="pressed" from="3D Games/3D Button" to="." method="_on_3D_Button_pressed"]
+[connection signal="pressed" from="3D Games/3D Button2" to="." method="_on_3D_Button2_pressed"]
+[connection signal="pressed" from="3D Games/3D Button3" to="." method="_on_3D_Button3_pressed"]
+[connection signal="pressed" from="3D Games/3D Button4" to="." method="_on_3D_Button4_pressed"]
+[connection signal="pressed" from="Roblox Clones/Clone Button" to="." method="_on_Clone_Button_pressed"]

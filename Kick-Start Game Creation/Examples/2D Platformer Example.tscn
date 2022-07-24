@@ -9,7 +9,8 @@
 position = Vector2( 164, 290 )
 RunSpeed = 250.0
 JumpSpeed = 900.0
-Gravity = 40.0
+CanAirJump = true
+MaxAirJumps = 1
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 modulate = Color( 1, 1, 1, 0.219608 )

@@ -9,8 +9,10 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89089, 4.10641, 0.0813682 )
 RunSpeed = 50.0
 JumpSpeed = 25.0
+CanAirJump = true
+MaxAirJumps = 1
 
 [node name="StaticBody" parent="." instance=ExtResource( 2 )]
-transform = Transform( 83.0893, 0, 0, 0, 1, 0, 0, 0, 1, -0.0178556, 9.53674e-07, 0.0150619 )
+transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 3, -0.0178556, 9.53674e-07, 0.0150619 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]

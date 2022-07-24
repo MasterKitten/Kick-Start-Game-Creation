@@ -22,3 +22,5 @@ mesh = SubResource( 2 )
 
 [node name="PlatformerPlayer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179852, 2.84457, -0.0839943 )
+CanAirJump = true
+MaxAirJumps = 1

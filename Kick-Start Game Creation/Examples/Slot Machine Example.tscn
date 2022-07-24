@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://.User Interface/Slot Machine/Slot Machine Scene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://.User Interface/Slot Machine/Scripts/MainSlotScript.gd" type="Script" id=2]
+[ext_resource path="res://1D User Interface/Slot Machine/Slot Machine Scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://1D User Interface/Slot Machine/Scripts/MainSlotScript.gd" type="Script" id=2]
 
 [node name="Slot Machine Example" type="Control"]
 anchor_right = 1.0
@@ -9,12 +9,14 @@ anchor_bottom = 1.0
 script = ExtResource( 2 )
 
 [node name="Slot Machine Scene" parent="." instance=ExtResource( 1 )]
+margin_top = -2.0
+margin_bottom = -2.0
 
 [node name="Button" type="Button" parent="."]
-margin_left = 861.0
-margin_top = 287.0
-margin_right = 966.0
-margin_bottom = 307.0
-text = "Spin The Slots!"
+margin_left = 202.0
+margin_top = 461.0
+margin_right = 245.0
+margin_bottom = 481.0
+text = "Spin!"
 
 [connection signal="pressed" from="Button" to="Slot Machine Scene" method="Spinner_Button_Pressed"]

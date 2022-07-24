@@ -49,4 +49,4 @@ func StopSpinning():
 	# This one is 2/3
 	elif (SlotLines[0].text == SlotLines[2].text) or (SlotLines[0].text == SlotLines[1].text) or (SlotLines[1].text == SlotLines[2].text):
 		GameController.Rigged(2)
-	print("Money: " + GameController.MoneyHave)
+	print("Money: " + str(GameController.MoneyHave))
