@@ -1,9 +1,14 @@
 extends KinematicBody
 
 export(float) var Speed = 8.0
-export(float) var RunMultiplier = 1.5
 export(float) var Gravity = 4.0
 export(float) var JumpStrength = 50.0
+
+export(bool) var CanRun = true
+export(float) var RunMultiplier = 1.5
+
+export(bool) var UsableMoney = true
+export(float) var Money
 
 export(bool) var CanAirJump
 export(int) var MaxAirJumps
@@ -40,19 +45,28 @@ func _physics_process(_delta):
 	Velocity = Vector3((Input.get_action_strength("Right") - Input.get_action_strength("Left")), Velocity.y, (Input.get_action_strength("Down") - Input.get_action_strength("Up")))
 	Velocity = Velocity.rotated(Vector3.UP, self.global_transform.basis.get_euler().y)
 	
+	# Basically walk but run when that happens.
 	Velocity = Vector3(Velocity.x * Speed, Velocity.y, Velocity.z * Speed)
 	if Input.get_action_strength("Run"):
 		Velocity = Vector3(Velocity.x * RunMultiplier, Velocity.y, Velocity.z * RunMultiplier)
 	
+	#Jumping
 	if Input.is_action_just_pressed("Jump3D") and is_on_floor():
 		Velocity.y = JumpStrength
 	# Air Jumps
 	if Input.is_action_just_pressed("Jump3D") and CanAirJump == true and CurrentAirJumps != MaxAirJumps:
 		CurrentAirJumps += 1
 		Velocity.y = JumpStrength
+	
 	if is_on_floor():
 		CurrentAirJumps = 0
-	
+	# Gravity
 	Velocity.y -= Gravity
 	
 	Velocity = move_and_slide(Velocity, Vector3.UP)
+
+func Die():
+	get_node("MeshInstance").queue_free()
+	get_node("CollisionShape").queue_free()
+	Speed = 0
+	get_node("CPUParticles").emitting = true

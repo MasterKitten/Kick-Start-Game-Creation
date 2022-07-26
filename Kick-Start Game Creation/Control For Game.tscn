@@ -111,22 +111,28 @@ margin_right = 200.0
 margin_bottom = 140.0
 text = "Rhythm"
 
-[node name="2D Button7" type="Button" parent="2D Games"]
+[node name="2D Button10" type="Button" parent="2D Games"]
 margin_top = 144.0
 margin_right = 200.0
 margin_bottom = 164.0
-text = "Top-Down Shooter"
+text = "Super Auto Pets"
 
-[node name="2D Button8" type="Button" parent="2D Games"]
+[node name="2D Button7" type="Button" parent="2D Games"]
 margin_top = 168.0
 margin_right = 200.0
 margin_bottom = 188.0
-text = "Visual Novel"
+text = "Top-Down Shooter"
 
-[node name="2D Button9" type="Button" parent="2D Games"]
+[node name="2D Button8" type="Button" parent="2D Games"]
 margin_top = 192.0
 margin_right = 200.0
 margin_bottom = 212.0
+text = "Visual Novel"
+
+[node name="2D Button9" type="Button" parent="2D Games"]
+margin_top = 216.0
+margin_right = 200.0
+margin_bottom = 236.0
 text = "Volume Visualizer"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
@@ -203,6 +209,7 @@ text = "Roblox Clones"
 [connection signal="pressed" from="2D Games/2D Button4" to="." method="_on_2D_Button4_pressed"]
 [connection signal="pressed" from="2D Games/2D Button5" to="." method="_on_2D_Button5_pressed"]
 [connection signal="pressed" from="2D Games/2D Button6" to="." method="_on_2D_Button6_pressed"]
+[connection signal="pressed" from="2D Games/2D Button10" to="." method="_on_2D_Button10_pressed"]
 [connection signal="pressed" from="2D Games/2D Button7" to="." method="_on_2D_Button7_pressed"]
 [connection signal="pressed" from="2D Games/2D Button8" to="." method="_on_2D_Button8_pressed"]
 [connection signal="pressed" from="2D Games/2D Button9" to="." method="_on_2D_Button9_pressed"]

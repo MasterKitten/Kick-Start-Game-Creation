@@ -1,18 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3D Scene/3D & 2D Platformer/PlatformerPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://3D Scene/3D & 2D Platformer/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://3D Scene/3D & 2D Platformer/Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D Scene/3D & 2D Platformer/Coin.tscn" type="PackedScene" id=4]
 
 [node name="3D & 2D Platform Example" type="Spatial"]
 
 [node name="KinematicBody" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89089, 4.10641, 0.0813682 )
-RunSpeed = 50.0
+WalkSpeed = 20.0
 JumpSpeed = 25.0
-CanAirJump = true
+RunSpeed = 40.0
 MaxAirJumps = 1
 
 [node name="StaticBody" parent="." instance=ExtResource( 2 )]
 transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 3, -0.0178556, 9.53674e-07, 0.0150619 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+[node name="Spike" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1983, 1.00149, 1.77697 )
+
+[node name="Spike2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3967, 1.00005, -2.58787 )
+
+[node name="Coin" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7505, 5.44977, 0.081995 )

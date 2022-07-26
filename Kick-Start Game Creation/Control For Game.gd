@@ -66,6 +66,10 @@ func _on_2D_Button9_pressed():
 	SceneNode = preload("res://Examples/Volume Visualizer Example.tscn")
 	get_tree().change_scene_to(SceneNode)
 
+func _on_2D_Button10_pressed():
+	SceneNode = preload("res://Examples/Super Auto Pets Example.tscn")
+	get_tree().change_scene_to(SceneNode)
+
 func _on_3D_Button_pressed():
 	SceneNode = preload("res://Examples/3D & 2D Platform Example.tscn")
 	get_tree().change_scene_to(SceneNode)

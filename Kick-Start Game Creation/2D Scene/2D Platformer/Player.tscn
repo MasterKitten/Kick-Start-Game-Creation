@@ -6,10 +6,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 1 )
-RunSpeed = 900.0
 JumpSpeed = 600.0
 Gravity = 40.0
+RunSpeed = 900.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1.66893e-06, 9.53674e-07 )
@@ -19,3 +21,14 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 100
+lifetime = 0.4
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+spread = 180.0
+initial_velocity = 125.0
+angular_velocity = 2.0

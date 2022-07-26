@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://2D Scene/Super Auto Pets/Script/Super Pets Script.gd" type="Script" id=1]
+[ext_resource path="res://2D Scene/Super Auto Pets/Item.tscn" type="PackedScene" id=2]
+
+[node name="Super Auto Pets Example" type="Node2D"]
+script = ExtResource( 1 )
+PetSlots = [ NodePath("PetSlot1"), NodePath("PetSlot2"), NodePath("PetSlot3"), NodePath("PetSlot4"), NodePath("PetSlot5") ]
+ShopSlots = [ NodePath("ShopSlot1"), NodePath("ShopSlot2"), NodePath("ShopSlot3"), NodePath("ShopSlot4") ]
+BuffSlots = [ NodePath("BuffSlot1"), NodePath("BuffSlot2") ]
+
+[node name="PetSlot1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 400, 100 )
+PetSlot = true
+
+[node name="PetSlot2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 325, 100 )
+PetSlot = true
+
+[node name="PetSlot3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 250, 100 )
+PetSlot = true
+
+[node name="PetSlot4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 175, 100 )
+PetSlot = true
+
+[node name="PetSlot5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 100, 100 )
+PetSlot = true
+
+[node name="ShopSlot1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 300, 500 )
+ShopSlot = true
+
+[node name="ShopSlot2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 225, 500 )
+ShopSlot = true
+
+[node name="ShopSlot3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 150, 500 )
+ShopSlot = true
+
+[node name="ShopSlot4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 75, 500 )
+ShopSlot = true
+
+[node name="BuffSlot1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 700, 500 )
+BuffSlot = true
+
+[node name="BuffSlot2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 625, 500 )
+BuffSlot = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 392.0
+margin_top = 482.0
+margin_right = 494.0
+margin_bottom = 502.0
+text = "Refresh Items"
+
+[connection signal="pressed" from="Button" to="." method="RandomizeShop"]

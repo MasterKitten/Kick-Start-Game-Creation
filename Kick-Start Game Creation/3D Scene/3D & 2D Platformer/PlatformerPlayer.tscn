@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3D Scene/3D & 2D Platformer/Texture/Sphere.png" type="Texture" id=1]
 [ext_resource path="res://3D Scene/3D & 2D Platformer/Script/PlatformerPlayer.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
 
+[sub_resource type="SphereMesh" id=2]
+
 [node name="KinematicBody" type="KinematicBody"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 2 )
-RunSpeed = 1.0
 JumpSpeed = 1.0
 Gravity = 1.0
+RunSpeed = 1.0
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
@@ -23,3 +27,12 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
 current = true
 fov = 90.0
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+emitting = false
+amount = 100
+lifetime = 0.4
+one_shot = true
+mesh = SubResource( 2 )
+spread = 180.0
+initial_velocity = 10.0
